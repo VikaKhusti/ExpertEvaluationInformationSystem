@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "UbVENhZH8uX4u+H1iEaUwVkrIcT6lOmlC2XIQU2PcSbiF75aXRE0dWPNV98ZBmEsoAC6IWWo3V/1QhdZImwnzg==",
+  "dgSpecHash": "CyWncaMWB+Luw6DL+0FEgvjpeB1/VVMSba/bREClgEf82cLe8KNrKCJaX/2oCCZDTpbE+5BMstA+ujIuZGqwJg==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\ExpertEvaluationIS\\ExpertEvaluationIS\\ExpertEvaluationIS.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\materialskin\\0.2.1\\materialskin.0.2.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MaterialSkin 0.2.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MaterialSkin",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

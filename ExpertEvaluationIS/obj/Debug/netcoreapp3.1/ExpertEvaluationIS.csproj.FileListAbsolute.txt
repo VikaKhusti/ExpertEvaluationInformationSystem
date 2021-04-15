@@ -13,3 +13,5 @@ C:\Users\user\source\repos\ExpertEvaluationIS\ExpertEvaluationIS\obj\Debug\netco
 C:\Users\user\source\repos\ExpertEvaluationIS\ExpertEvaluationIS\obj\Debug\netcoreapp3.1\ExpertEvaluationIS.genruntimeconfig.cache
 C:\Users\user\source\repos\ExpertEvaluationIS\ExpertEvaluationIS\obj\Debug\netcoreapp3.1\ExpertEvaluationIS.Start_Page.resources
 C:\Users\user\source\repos\ExpertEvaluationIS\ExpertEvaluationIS\obj\Debug\netcoreapp3.1\ExpertEvaluationIS.csproj.GenerateResource.cache
+C:\Users\user\source\repos\ExpertEvaluationIS\ExpertEvaluationIS\bin\Debug\netcoreapp3.1\MaterialSkin.dll
+C:\Users\user\source\repos\ExpertEvaluationIS\ExpertEvaluationIS\obj\Debug\netcoreapp3.1\ExpertEvaluationIS.csproj.CopyComplete
