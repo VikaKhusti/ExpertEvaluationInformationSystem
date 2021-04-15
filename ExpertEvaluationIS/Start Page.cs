@@ -11,6 +11,7 @@ namespace ExpertEvaluationIS
 {
     public partial class Start_Page : MaterialForm
     {
+        public int Count;
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
         public Start_Page()
         {
@@ -26,16 +27,52 @@ namespace ExpertEvaluationIS
                 MaterialSkin.Accent.DeepPurple700,
                 MaterialSkin.TextShade.WHITE
                 );
+            setVisibility(false);
         }
+
+        private void setVisibility(bool visible)
+        {
+            countLabel.Visible = visible;
+            countTextField.Visible = visible;
+            nextButton.Visible = visible;
+            goBackButton.Visible = visible;
+            automaticButton.Visible = !visible;
+        }
+
         UserAction useraction;
         private void automaticButton_Click(object sender, EventArgs e)
         {
             useraction = new UserAction(true, null);
         }
 
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            setVisibility(false);
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Count = Convert.ToInt32(countTextField.Text);
+                Input inputform = new Input();
+                inputform.ShowDialog();
+            }
+            catch
+            {
+                MessageBox.Show(
+                    "Не вірно внесені дані",
+                    "Помилка",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                    );
+            }
+        }
+
         private void manualButton_Click(object sender, EventArgs e)
         {
             useraction = new UserAction(null, true);
+            setVisibility(true);
         }
     }
 }

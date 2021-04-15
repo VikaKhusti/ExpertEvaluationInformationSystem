@@ -31,6 +31,10 @@ namespace ExpertEvaluationIS
         {
             this.manualButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.automaticButton = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.countLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.countTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.nextButton = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.goBackButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // manualButton
@@ -38,7 +42,7 @@ namespace ExpertEvaluationIS
             this.manualButton.AutoSize = true;
             this.manualButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.manualButton.Depth = 0;
-            this.manualButton.Location = new System.Drawing.Point(296, 176);
+            this.manualButton.Location = new System.Drawing.Point(296, 211);
             this.manualButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.manualButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.manualButton.Name = "manualButton";
@@ -52,7 +56,7 @@ namespace ExpertEvaluationIS
             // automaticButton
             // 
             this.automaticButton.Depth = 0;
-            this.automaticButton.Location = new System.Drawing.Point(296, 230);
+            this.automaticButton.Location = new System.Drawing.Point(296, 167);
             this.automaticButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.automaticButton.Name = "automaticButton";
             this.automaticButton.Primary = true;
@@ -62,11 +66,73 @@ namespace ExpertEvaluationIS
             this.automaticButton.UseVisualStyleBackColor = true;
             this.automaticButton.Click += new System.EventHandler(this.automaticButton_Click);
             // 
+            // countLabel
+            // 
+            this.countLabel.AutoSize = true;
+            this.countLabel.Depth = 0;
+            this.countLabel.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.countLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.countLabel.Location = new System.Drawing.Point(204, 271);
+            this.countLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.countLabel.Name = "countLabel";
+            this.countLabel.Size = new System.Drawing.Size(209, 19);
+            this.countLabel.TabIndex = 2;
+            this.countLabel.Text = "Введіть к-сть груп критеріїв:";
+            // 
+            // countTextField
+            // 
+            this.countTextField.Depth = 0;
+            this.countTextField.Hint = "";
+            this.countTextField.Location = new System.Drawing.Point(421, 269);
+            this.countTextField.MouseState = MaterialSkin.MouseState.HOVER;
+            this.countTextField.Name = "countTextField";
+            this.countTextField.PasswordChar = '\0';
+            this.countTextField.SelectedText = "";
+            this.countTextField.SelectionLength = 0;
+            this.countTextField.SelectionStart = 0;
+            this.countTextField.Size = new System.Drawing.Size(91, 23);
+            this.countTextField.TabIndex = 3;
+            this.countTextField.Text = "5";
+            this.countTextField.UseSystemPasswordChar = false;
+            // 
+            // nextButton
+            // 
+            this.nextButton.Depth = 0;
+            this.nextButton.Location = new System.Drawing.Point(356, 317);
+            this.nextButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Primary = true;
+            this.nextButton.Size = new System.Drawing.Size(75, 30);
+            this.nextButton.TabIndex = 4;
+            this.nextButton.Text = "Далі";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
+            // goBackButton
+            // 
+            this.goBackButton.AutoSize = true;
+            this.goBackButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.goBackButton.Depth = 0;
+            this.goBackButton.Location = new System.Drawing.Point(340, 399);
+            this.goBackButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.goBackButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Primary = false;
+            this.goBackButton.Size = new System.Drawing.Size(110, 36);
+            this.goBackButton.TabIndex = 5;
+            this.goBackButton.Text = "Повернутися";
+            this.goBackButton.UseVisualStyleBackColor = true;
+            this.goBackButton.Click += new System.EventHandler(this.materialFlatButton1_Click);
+            // 
             // Start_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.goBackButton);
+            this.Controls.Add(this.nextButton);
+            this.Controls.Add(this.countTextField);
+            this.Controls.Add(this.countLabel);
             this.Controls.Add(this.automaticButton);
             this.Controls.Add(this.manualButton);
             this.Name = "Start_Page";
@@ -80,5 +146,9 @@ namespace ExpertEvaluationIS
 
         private MaterialSkin.Controls.MaterialFlatButton manualButton;
         private MaterialSkin.Controls.MaterialRaisedButton automaticButton;
+        private MaterialSkin.Controls.MaterialLabel countLabel;
+        private MaterialSkin.Controls.MaterialSingleLineTextField countTextField;
+        private MaterialSkin.Controls.MaterialRaisedButton nextButton;
+        private MaterialSkin.Controls.MaterialFlatButton goBackButton;
     }
 }
