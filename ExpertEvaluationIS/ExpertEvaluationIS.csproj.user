@@ -4,6 +4,9 @@
     <Compile Update="Input.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Pool.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Result.cs">
       <SubType>Form</SubType>
     </Compile>

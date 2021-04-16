@@ -12,11 +12,12 @@ namespace ExpertEvaluationIS
 {
     public partial class Input : MaterialForm
     {
-        readonly MaterialSkin.MaterialSkinManager materialSkinManager;
+        readonly MaterialSkin.MaterialSkinManager materialSkinManager;        
+        public static G gMain = new G(Start_Page.Count, 4);
+
+        List<Gi> giCollection = new List<Gi>();
         int itemCount = 1;
         int click = 1;
-        G gMain = new G(Start_Page.Count, 4);
-        List<Gi> giCollection = new List<Gi>();
 
         public Input()
         {
@@ -58,7 +59,7 @@ namespace ExpertEvaluationIS
                 marks.Add(3, Convert.ToInt32(mark3TextField.Text));
                 marks.Add(4, Convert.ToInt32(mark4TextField.Text));
                 value = Convert.ToInt32(valueTextField.Text);
-                desirableRat = Convert.ToInt32(desiredMarkTextField.Text);
+               // desirableRat = Convert.ToInt32(desiredMarkTextField.Text);
             
             }
             catch
@@ -77,7 +78,7 @@ namespace ExpertEvaluationIS
                     mark3TextField.Text = "";
                     mark4TextField.Text = "";
                     valueTextField.Text = "";
-                    desiredMarkTextField.Text = "";
+                    //desiredMarkTextField.Text = "";
 
                     isExceptionShown = !isExceptionShown;
                 }
@@ -107,8 +108,10 @@ namespace ExpertEvaluationIS
             if (giCollection.Count == gMain.Count - 1) saveButton.Text = "Збрегти і продовжити";
             if (giCollection.Count == gMain.Count)
             {
-                Result result = new Result();
-                result.ShowDialog();
+                //Result result = new Result();
+                //result.ShowDialog();
+                Pool pool = new Pool();
+                pool.ShowDialog();
 
                 // toDo
                 Input input = new Input();
@@ -141,7 +144,7 @@ namespace ExpertEvaluationIS
             mark4TextField.Text = $"{click + 20}";
 
             valueTextField.Text = "25";
-            desiredMarkTextField.Text = "24";
+            //desiredMarkTextField.Text = "24";
         }
         
         public void resetFields()
@@ -159,7 +162,7 @@ namespace ExpertEvaluationIS
             mark4TextField.Text = "";
 
             valueTextField.Text = "";
-            desiredMarkTextField.Text = "";
+            //desiredMarkTextField.Text = "";
 
             //Thread.Sleep(1500);
             //checkLabel.Text = "";

@@ -17,3 +17,4 @@ C:\Users\user\source\repos\ExpertEvaluationIS\ExpertEvaluationIS\bin\Debug\netco
 C:\Users\user\source\repos\ExpertEvaluationIS\ExpertEvaluationIS\obj\Debug\netcoreapp3.1\ExpertEvaluationIS.csprojAssemblyReference.cache
 C:\Users\user\source\repos\ExpertEvaluationIS\ExpertEvaluationIS\obj\Debug\netcoreapp3.1\ExpertEvaluationIS.genruntimeconfig.cache
 C:\Users\user\source\repos\ExpertEvaluationIS\ExpertEvaluationIS\obj\Debug\netcoreapp3.1\ExpertEvaluationIS.Result.resources
+C:\Users\user\source\repos\ExpertEvaluationIS\ExpertEvaluationIS\obj\Debug\netcoreapp3.1\ExpertEvaluationIS.Pool.resources
