@@ -4,14 +4,22 @@ using System.Text;
 
 namespace ExpertEvaluationIS
 {
-    class Gi
+    public class Gi
     {
         public string GName { get; set; }
-        public int Number { get; set; }
-        public int KCount { get; set; }
-        public List<Kij> KijCollection { get; set; }
+        public int Number { get; set; }       
+        public List<Qij> QijCollection { get; set; }
         public int Valuation { get; set; }
         public int DesirableRating { get; set; }
         public int Sum { get; set; }
+
+        public Gi(string GName, int Number, List<Qij> QijCollection, int Valuation, int DesirableRating)
+        {
+            this.GName = GName;
+            this.Number = Number;
+            this.QijCollection = QijCollection;
+            this.Valuation = Valuation;
+            this.DesirableRating = DesirableRating;
+        }
     }
 }

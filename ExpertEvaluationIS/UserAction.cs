@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ExpertEvaluationIS
 {
-    class UserAction
+    public class UserAction
     {
         public bool? AutomaticInput { get; set; }
         public bool? ManualInput { get; set; }

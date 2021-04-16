@@ -11,7 +11,7 @@ namespace ExpertEvaluationIS
 {
     public partial class Start_Page : MaterialForm
     {
-        public int Count;
+        public static int Count;
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
         public Start_Page()
         {
