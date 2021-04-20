@@ -6,9 +6,9 @@ namespace ExpertEvaluationIS
 {
     public class G
     {
-        public int Count { get; set; }
-        public int QCount { get; set; }
-        public List<Gi> GiCollection { get; set; }
+        public int Count { get; set; }                  //count of Criterion
+        public int QCount { get; set; }                 //count of Questions, by default = 4
+        public List<Gi> GiCollection { get; set; }      //collection of Criterion   
 
         public G() { }
 

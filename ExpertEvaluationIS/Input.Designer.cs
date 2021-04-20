@@ -51,17 +51,17 @@ namespace ExpertEvaluationIS
             this.saveButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.setDummyDataLinkLabel = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.q11tf = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.q12tf = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.v11tf = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField6 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField7 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.v13tf = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.q14tf = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.q13tf = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField8 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField9 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label12 = new System.Windows.Forms.Label();
@@ -349,10 +349,11 @@ namespace ExpertEvaluationIS
             // 
             this.checkLabel.AutoSize = true;
             this.checkLabel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkLabel.Location = new System.Drawing.Point(221, 952);
+            this.checkLabel.Location = new System.Drawing.Point(353, 835);
             this.checkLabel.Name = "checkLabel";
-            this.checkLabel.Size = new System.Drawing.Size(0, 20);
+            this.checkLabel.Size = new System.Drawing.Size(46, 20);
             this.checkLabel.TabIndex = 21;
+            this.checkLabel.Text = "check";
             // 
             // saveButton
             // 
@@ -389,53 +390,53 @@ namespace ExpertEvaluationIS
             this.label7.TabIndex = 24;
             this.label7.Text = "Відповіді:";
             // 
-            // materialSingleLineTextField1
+            // q11tf
             // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(202, 253);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(468, 23);
-            this.materialSingleLineTextField1.TabIndex = 25;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.q11tf.Depth = 0;
+            this.q11tf.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q11tf.Hint = "";
+            this.q11tf.Location = new System.Drawing.Point(202, 253);
+            this.q11tf.MouseState = MaterialSkin.MouseState.HOVER;
+            this.q11tf.Name = "q11tf";
+            this.q11tf.PasswordChar = '\0';
+            this.q11tf.SelectedText = "";
+            this.q11tf.SelectionLength = 0;
+            this.q11tf.SelectionStart = 0;
+            this.q11tf.Size = new System.Drawing.Size(468, 23);
+            this.q11tf.TabIndex = 25;
+            this.q11tf.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField2
+            // q12tf
             // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.materialSingleLineTextField2.Hint = "";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(869, 253);
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(670, 23);
-            this.materialSingleLineTextField2.TabIndex = 26;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.q12tf.Depth = 0;
+            this.q12tf.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q12tf.Hint = "";
+            this.q12tf.Location = new System.Drawing.Point(874, 253);
+            this.q12tf.MouseState = MaterialSkin.MouseState.HOVER;
+            this.q12tf.Name = "q12tf";
+            this.q12tf.PasswordChar = '\0';
+            this.q12tf.SelectedText = "";
+            this.q12tf.SelectionLength = 0;
+            this.q12tf.SelectionStart = 0;
+            this.q12tf.Size = new System.Drawing.Size(670, 23);
+            this.q12tf.TabIndex = 26;
+            this.q12tf.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField3
+            // v11tf
             // 
-            this.materialSingleLineTextField3.Depth = 0;
-            this.materialSingleLineTextField3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.materialSingleLineTextField3.Hint = "";
-            this.materialSingleLineTextField3.Location = new System.Drawing.Point(701, 253);
-            this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
-            this.materialSingleLineTextField3.PasswordChar = '\0';
-            this.materialSingleLineTextField3.SelectedText = "";
-            this.materialSingleLineTextField3.SelectionLength = 0;
-            this.materialSingleLineTextField3.SelectionStart = 0;
-            this.materialSingleLineTextField3.Size = new System.Drawing.Size(63, 23);
-            this.materialSingleLineTextField3.TabIndex = 27;
-            this.materialSingleLineTextField3.UseSystemPasswordChar = false;
+            this.v11tf.Depth = 0;
+            this.v11tf.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.v11tf.Hint = "";
+            this.v11tf.Location = new System.Drawing.Point(701, 253);
+            this.v11tf.MouseState = MaterialSkin.MouseState.HOVER;
+            this.v11tf.Name = "v11tf";
+            this.v11tf.PasswordChar = '\0';
+            this.v11tf.SelectedText = "";
+            this.v11tf.SelectionLength = 0;
+            this.v11tf.SelectionStart = 0;
+            this.v11tf.Size = new System.Drawing.Size(63, 23);
+            this.v11tf.TabIndex = 27;
+            this.v11tf.UseSystemPasswordChar = false;
             // 
             // materialSingleLineTextField4
             // 
@@ -493,53 +494,53 @@ namespace ExpertEvaluationIS
             this.label11.TabIndex = 34;
             this.label11.Text = "3";
             // 
-            // materialSingleLineTextField5
+            // v13tf
             // 
-            this.materialSingleLineTextField5.Depth = 0;
-            this.materialSingleLineTextField5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.materialSingleLineTextField5.Hint = "";
-            this.materialSingleLineTextField5.Location = new System.Drawing.Point(701, 291);
-            this.materialSingleLineTextField5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField5.Name = "materialSingleLineTextField5";
-            this.materialSingleLineTextField5.PasswordChar = '\0';
-            this.materialSingleLineTextField5.SelectedText = "";
-            this.materialSingleLineTextField5.SelectionLength = 0;
-            this.materialSingleLineTextField5.SelectionStart = 0;
-            this.materialSingleLineTextField5.Size = new System.Drawing.Size(63, 23);
-            this.materialSingleLineTextField5.TabIndex = 33;
-            this.materialSingleLineTextField5.UseSystemPasswordChar = false;
+            this.v13tf.Depth = 0;
+            this.v13tf.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.v13tf.Hint = "";
+            this.v13tf.Location = new System.Drawing.Point(701, 291);
+            this.v13tf.MouseState = MaterialSkin.MouseState.HOVER;
+            this.v13tf.Name = "v13tf";
+            this.v13tf.PasswordChar = '\0';
+            this.v13tf.SelectedText = "";
+            this.v13tf.SelectionLength = 0;
+            this.v13tf.SelectionStart = 0;
+            this.v13tf.Size = new System.Drawing.Size(63, 23);
+            this.v13tf.TabIndex = 33;
+            this.v13tf.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField6
+            // q14tf
             // 
-            this.materialSingleLineTextField6.Depth = 0;
-            this.materialSingleLineTextField6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.materialSingleLineTextField6.Hint = "";
-            this.materialSingleLineTextField6.Location = new System.Drawing.Point(869, 291);
-            this.materialSingleLineTextField6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField6.Name = "materialSingleLineTextField6";
-            this.materialSingleLineTextField6.PasswordChar = '\0';
-            this.materialSingleLineTextField6.SelectedText = "";
-            this.materialSingleLineTextField6.SelectionLength = 0;
-            this.materialSingleLineTextField6.SelectionStart = 0;
-            this.materialSingleLineTextField6.Size = new System.Drawing.Size(670, 23);
-            this.materialSingleLineTextField6.TabIndex = 32;
-            this.materialSingleLineTextField6.UseSystemPasswordChar = false;
+            this.q14tf.Depth = 0;
+            this.q14tf.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q14tf.Hint = "";
+            this.q14tf.Location = new System.Drawing.Point(869, 291);
+            this.q14tf.MouseState = MaterialSkin.MouseState.HOVER;
+            this.q14tf.Name = "q14tf";
+            this.q14tf.PasswordChar = '\0';
+            this.q14tf.SelectedText = "";
+            this.q14tf.SelectionLength = 0;
+            this.q14tf.SelectionStart = 0;
+            this.q14tf.Size = new System.Drawing.Size(670, 23);
+            this.q14tf.TabIndex = 32;
+            this.q14tf.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField7
+            // q13tf
             // 
-            this.materialSingleLineTextField7.Depth = 0;
-            this.materialSingleLineTextField7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.materialSingleLineTextField7.Hint = "";
-            this.materialSingleLineTextField7.Location = new System.Drawing.Point(202, 291);
-            this.materialSingleLineTextField7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField7.Name = "materialSingleLineTextField7";
-            this.materialSingleLineTextField7.PasswordChar = '\0';
-            this.materialSingleLineTextField7.SelectedText = "";
-            this.materialSingleLineTextField7.SelectionLength = 0;
-            this.materialSingleLineTextField7.SelectionStart = 0;
-            this.materialSingleLineTextField7.Size = new System.Drawing.Size(468, 23);
-            this.materialSingleLineTextField7.TabIndex = 31;
-            this.materialSingleLineTextField7.UseSystemPasswordChar = false;
+            this.q13tf.Depth = 0;
+            this.q13tf.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q13tf.Hint = "";
+            this.q13tf.Location = new System.Drawing.Point(202, 291);
+            this.q13tf.MouseState = MaterialSkin.MouseState.HOVER;
+            this.q13tf.Name = "q13tf";
+            this.q13tf.PasswordChar = '\0';
+            this.q13tf.SelectedText = "";
+            this.q13tf.SelectionLength = 0;
+            this.q13tf.SelectionStart = 0;
+            this.q13tf.Size = new System.Drawing.Size(468, 23);
+            this.q13tf.TabIndex = 31;
+            this.q13tf.UseSystemPasswordChar = false;
             // 
             // materialSingleLineTextField8
             // 
@@ -1095,7 +1096,8 @@ namespace ExpertEvaluationIS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1700, 1000);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1403, 805);
             this.Controls.Add(this.materialSingleLineTextField27);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.materialSingleLineTextField28);
@@ -1138,15 +1140,15 @@ namespace ExpertEvaluationIS
             this.Controls.Add(this.materialSingleLineTextField8);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.materialSingleLineTextField5);
-            this.Controls.Add(this.materialSingleLineTextField6);
-            this.Controls.Add(this.materialSingleLineTextField7);
+            this.Controls.Add(this.v13tf);
+            this.Controls.Add(this.q14tf);
+            this.Controls.Add(this.q13tf);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.materialSingleLineTextField4);
-            this.Controls.Add(this.materialSingleLineTextField3);
-            this.Controls.Add(this.materialSingleLineTextField2);
-            this.Controls.Add(this.materialSingleLineTextField1);
+            this.Controls.Add(this.v11tf);
+            this.Controls.Add(this.q12tf);
+            this.Controls.Add(this.q11tf);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.setDummyDataLinkLabel);
             this.Controls.Add(this.saveButton);
@@ -1172,6 +1174,7 @@ namespace ExpertEvaluationIS
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Input";
             this.Text = "Input";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1200,17 +1203,17 @@ namespace ExpertEvaluationIS
         private MaterialSkin.Controls.MaterialRaisedButton saveButton;
         private System.Windows.Forms.LinkLabel setDummyDataLinkLabel;
         private System.Windows.Forms.Label label7;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
+        private MaterialSkin.Controls.MaterialSingleLineTextField q11tf;
+        private MaterialSkin.Controls.MaterialSingleLineTextField q12tf;
+        private MaterialSkin.Controls.MaterialSingleLineTextField v11tf;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField5;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField6;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField7;
+        private MaterialSkin.Controls.MaterialSingleLineTextField v13tf;
+        private MaterialSkin.Controls.MaterialSingleLineTextField q14tf;
+        private MaterialSkin.Controls.MaterialSingleLineTextField q13tf;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField8;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField9;
         private System.Windows.Forms.Label label12;

@@ -38,7 +38,7 @@ namespace ExpertEvaluationIS
            
             //InitializeObjects();
         }
-
+/*
         public Gi InitializeGiInstance(int number)
         {
            
@@ -97,14 +97,15 @@ namespace ExpertEvaluationIS
                     if (item.Key == i) { mark = item.Value; break; }
 
                 }
-                qcollection.Add(new Qij(number, i, quest, mark));
+                //qcollection.Add(new Qij(number, i, quest, mark));
             }
-            return new Gi(name, number, qcollection, value, desirableRat);
+            //return new Gi(name, number, qcollection, value, desirableRat);
         }
+*/
 
         public void InitializeObjects()
         {
-            giCollection.Add(InitializeGiInstance(itemCount));
+            //giCollection.Add(InitializeGiInstance(itemCount));
             if (giCollection.Count == gMain.Count - 1) saveButton.Text = "Збрегти і продовжити";
             if (giCollection.Count == gMain.Count)
             {

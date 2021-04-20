@@ -55,8 +55,10 @@ namespace ExpertEvaluationIS
             try
             {
                 Count = Convert.ToInt32(countTextField.Text);
-                Input inputform = new Input();
-                inputform.ShowDialog();
+                //Input inputform = new Input();
+                //inputform.ShowDialog();
+                SetUp setUp = new SetUp();
+                setUp.ShowDialog();
             }
             catch
             {

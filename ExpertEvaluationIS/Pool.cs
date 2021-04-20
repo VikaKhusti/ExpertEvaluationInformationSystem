@@ -39,7 +39,7 @@ namespace ExpertEvaluationIS
                 {
                     foreach (var q in item.QijCollection)
                     {
-                        titleLabel.Text = q.Question;
+                        titleLabel.Text = q.Name;
 
                     }
                 }

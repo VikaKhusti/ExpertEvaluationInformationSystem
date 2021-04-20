@@ -33,19 +33,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\ExpertEvaluationIS\\ExpertEvaluationIS\\ExpertEvaluationIS.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\ExpertEvaluationInformationSystem\\ExpertEvaluationIS\\ExpertEvaluationIS.csproj",
       "projectName": "ExpertEvaluationIS",
-      "projectPath": "C:\\Users\\user\\source\\repos\\ExpertEvaluationIS\\ExpertEvaluationIS\\ExpertEvaluationIS.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\ExpertEvaluationIS\\ExpertEvaluationIS\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\ExpertEvaluationInformationSystem\\ExpertEvaluationIS\\ExpertEvaluationIS.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\ExpertEvaluationInformationSystem\\ExpertEvaluationIS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -94,7 +94,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   },
