@@ -13,6 +13,8 @@ namespace ExpertEvaluationIS
     {
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
         G gmain;
+        int GCount = 1;
+        int QCount = 1;
         public Pool()
         {
             InitializeComponent();
@@ -28,18 +30,26 @@ namespace ExpertEvaluationIS
                 MaterialSkin.TextShade.WHITE
                 );
 
-            gmain = Input.gMain;
+            gmain = SetUp.gMain;
+            InitializeFields();
         }
 
-        private void InitializeFields(int Gnumber, int Qnumber)
+        private void InitializeFields()
         {
             foreach (var item in gmain.GiCollection)
             {
-                if(item.Number == Gnumber)
+                if(item.Number == GCount)
                 {
                     foreach (var q in item.QijCollection)
                     {
-                        titleLabel.Text = q.Name;
+                        questionLabel.Text = q.Name;
+                        if(q.Number == QCount)
+                        {
+                            foreach (var a in q.ansCollection)
+                            {
+                                quest1RadioButton.Name = a.Answer;
+                            }
+                        }
 
                     }
                 }

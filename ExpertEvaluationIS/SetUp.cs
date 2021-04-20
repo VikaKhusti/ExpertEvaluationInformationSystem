@@ -4,11 +4,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
 namespace ExpertEvaluationIS
 {
+    static class Extensions
+    {
+        public static IList<T> Clone<T>(this IList<T> listToClone) where T : ICloneable
+        {
+            return listToClone.Select(item => (T)item.Clone()).ToList();
+        }
+    }
     public partial class SetUp : MaterialForm
     {
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
@@ -83,9 +91,11 @@ namespace ExpertEvaluationIS
             answersCollection.Add(new Answers(ans2, val2));
             answersCollection.Add(new Answers(ans3, val3));
             answersCollection.Add(new Answers(ans4, val4));
+
+            IList<Answers> tempAns = Extensions.Clone<Answers>(answersCollection);
+            questionCollection.Add(new Qij(GCount, QCount, QiName, tempAns, mark));
             QCount++;
-            questionCollection.Add(new Qij(GCount, QCount, QiName, answersCollection, mark));
-            if(questionCollection.Count >= gMain.QCount)
+            if (questionCollection.Count >= gMain.QCount)
             {
                 addGi(questionCollection);
             }
@@ -98,8 +108,10 @@ namespace ExpertEvaluationIS
             giCollection.Add(new Gi(GiName, GCount, questions));
             if (giCollection.Count >= gMain.Count)
             {
-                gMain.GiCollection = giCollection;
-                        
+                var tempCollection = new List<Gi>(giCollection);
+                gMain.GiCollection = tempCollection;
+                Pool poolDialog = new Pool();
+                poolDialog.ShowDialog();
                 // INPUT COMLITED HERE
             }
             questionCollection.Clear();
