@@ -1,25 +1,20 @@
 ﻿using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
 namespace ExpertEvaluationIS
 {
-    static class Extensions
-    {
-        public static IList<T> Clone<T>(this IList<T> listToClone) where T : ICloneable
-        {
-            return listToClone.Select(item => (T)item.Clone()).ToList();
-        }
-    }
+
     public partial class SetUp : MaterialForm
     {
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
+        public static Groups groups = new Groups(Start_Page.CountOfGroups);
         public static G gMain = new G(Start_Page.Count, 4);
 
         List<Qij> qiCollecton = new List<Qij>();
@@ -92,26 +87,35 @@ namespace ExpertEvaluationIS
             answersCollection.Add(new Answers(ans3, val3));
             answersCollection.Add(new Answers(ans4, val4));
 
-            IList<Answers> tempAns = Extensions.Clone<Answers>(answersCollection);
-            questionCollection.Add(new Qij(GCount, QCount, QiName, tempAns, mark));
+           // List<Answers> tempAns = answersCollection;           
+            questionCollection.Add(new Qij(GCount, QCount, QiName, new List<Answers>(answersCollection), mark));
             QCount++;
             if (questionCollection.Count >= gMain.QCount)
             {
-                addGi(questionCollection);
+                addGi(new List<Qij>(questionCollection));
             }
-           
+
         }
 
         private void addGi(List<Qij> questions)
         {
             string GiName = nameTextField.Text;
             giCollection.Add(new Gi(GiName, GCount, questions));
+            List<G> groupsCollection = new List<G>();
             if (giCollection.Count >= gMain.Count)
             {
-                var tempCollection = new List<Gi>(giCollection);
-                gMain.GiCollection = tempCollection;
-                Pool poolDialog = new Pool();
-                poolDialog.ShowDialog();
+                //var tempCollection = new List<Gi>(giCollection);
+                //gMain.GiCollection = giCollection;
+                groupsCollection.Add(new G(gMain.Count, 4, new List<Gi>(giCollection)));
+                if(groupsCollection.Count >= Start_Page.CountOfGroups)
+                {
+                    groups.GCollection = groupsCollection;
+                }
+                giCollection.Clear();
+                //groups.GCollection.Add(gMain);
+                //gMain.GiCollection.Clear();
+                //Pool poolDialog = new Pool();
+                //poolDialog.ShowDialog();
                 // INPUT COMLITED HERE
             }
             questionCollection.Clear();
@@ -140,7 +144,7 @@ namespace ExpertEvaluationIS
 
             click++;
         }
-        
+
         private void resetFields()
         {
             nameTextField.Text = "";

@@ -30,7 +30,7 @@ namespace ExpertEvaluationIS
                 MaterialSkin.TextShade.WHITE
                 );
 
-            gmain = SetUp.gMain;
+            //gmain = SetUp.gMain;
             InitializeFields();
         }
 

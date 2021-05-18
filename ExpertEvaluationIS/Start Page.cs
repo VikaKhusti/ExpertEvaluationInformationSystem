@@ -12,6 +12,7 @@ namespace ExpertEvaluationIS
     public partial class Start_Page : MaterialForm
     {
         public static int Count;
+        public static int CountOfGroups;
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
         public Start_Page()
         {
@@ -33,6 +34,8 @@ namespace ExpertEvaluationIS
         private void setVisibility(bool visible)
         {
             countLabel.Visible = visible;
+            ccountLabel.Visible = visible;
+            countOfGroupsTextField.Visible = visible;
             countTextField.Visible = visible;
             nextButton.Visible = visible;
             goBackButton.Visible = visible;
@@ -54,6 +57,7 @@ namespace ExpertEvaluationIS
         {
             try
             {
+                CountOfGroups = Convert.ToInt32(countOfGroupsTextField.Text);
                 Count = Convert.ToInt32(countTextField.Text);
                 //Input inputform = new Input();
                 //inputform.ShowDialog();

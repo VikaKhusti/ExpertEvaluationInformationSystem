@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ExpertEvaluationIS
 {
-    public class Answers : ICloneable
+    public class Answers //: ICloneable
     {
         // public int GNumber { get; set; }
         //public int QNumber { get; set; }
@@ -19,9 +19,11 @@ namespace ExpertEvaluationIS
             this.Value = value;
         }
 
+        /*
         public object IList<Answers> Clone<Answers>(this IList<Answers> listToClone) where T : ICloneable
         {
             return listToClone.Select(item => (T)item.Clone()).ToList();
         }
+        */
     }
 }

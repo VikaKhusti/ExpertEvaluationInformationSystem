@@ -32,9 +32,11 @@ namespace ExpertEvaluationIS
             this.manualButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.automaticButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.countLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.countTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.countOfGroupsTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.nextButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.goBackButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.countTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.ccountLabel = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // manualButton
@@ -79,26 +81,26 @@ namespace ExpertEvaluationIS
             this.countLabel.TabIndex = 2;
             this.countLabel.Text = "Введіть к-сть груп критеріїв:";
             // 
-            // countTextField
+            // countOfGroupsTextField
             // 
-            this.countTextField.Depth = 0;
-            this.countTextField.Hint = "";
-            this.countTextField.Location = new System.Drawing.Point(421, 269);
-            this.countTextField.MouseState = MaterialSkin.MouseState.HOVER;
-            this.countTextField.Name = "countTextField";
-            this.countTextField.PasswordChar = '\0';
-            this.countTextField.SelectedText = "";
-            this.countTextField.SelectionLength = 0;
-            this.countTextField.SelectionStart = 0;
-            this.countTextField.Size = new System.Drawing.Size(91, 23);
-            this.countTextField.TabIndex = 3;
-            this.countTextField.Text = "5";
-            this.countTextField.UseSystemPasswordChar = false;
+            this.countOfGroupsTextField.Depth = 0;
+            this.countOfGroupsTextField.Hint = "";
+            this.countOfGroupsTextField.Location = new System.Drawing.Point(421, 269);
+            this.countOfGroupsTextField.MouseState = MaterialSkin.MouseState.HOVER;
+            this.countOfGroupsTextField.Name = "countOfGroupsTextField";
+            this.countOfGroupsTextField.PasswordChar = '\0';
+            this.countOfGroupsTextField.SelectedText = "";
+            this.countOfGroupsTextField.SelectionLength = 0;
+            this.countOfGroupsTextField.SelectionStart = 0;
+            this.countOfGroupsTextField.Size = new System.Drawing.Size(91, 23);
+            this.countOfGroupsTextField.TabIndex = 3;
+            this.countOfGroupsTextField.Text = "2";
+            this.countOfGroupsTextField.UseSystemPasswordChar = false;
             // 
             // nextButton
             // 
             this.nextButton.Depth = 0;
-            this.nextButton.Location = new System.Drawing.Point(356, 317);
+            this.nextButton.Location = new System.Drawing.Point(356, 340);
             this.nextButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.nextButton.Name = "nextButton";
             this.nextButton.Primary = true;
@@ -124,14 +126,45 @@ namespace ExpertEvaluationIS
             this.goBackButton.UseVisualStyleBackColor = true;
             this.goBackButton.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
+            // countTextField
+            // 
+            this.countTextField.Depth = 0;
+            this.countTextField.Hint = "";
+            this.countTextField.Location = new System.Drawing.Point(421, 302);
+            this.countTextField.MouseState = MaterialSkin.MouseState.HOVER;
+            this.countTextField.Name = "countTextField";
+            this.countTextField.PasswordChar = '\0';
+            this.countTextField.SelectedText = "";
+            this.countTextField.SelectionLength = 0;
+            this.countTextField.SelectionStart = 0;
+            this.countTextField.Size = new System.Drawing.Size(91, 23);
+            this.countTextField.TabIndex = 7;
+            this.countTextField.Text = "4";
+            this.countTextField.UseSystemPasswordChar = false;
+            // 
+            // ccountLabel
+            // 
+            this.ccountLabel.AutoSize = true;
+            this.ccountLabel.Depth = 0;
+            this.ccountLabel.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ccountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ccountLabel.Location = new System.Drawing.Point(187, 302);
+            this.ccountLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ccountLabel.Name = "ccountLabel";
+            this.ccountLabel.Size = new System.Drawing.Size(226, 19);
+            this.ccountLabel.TabIndex = 6;
+            this.ccountLabel.Text = "Введіть к-сть критеріїв в групі:";
+            // 
             // Start_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 516);
+            this.Controls.Add(this.countTextField);
+            this.Controls.Add(this.ccountLabel);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.nextButton);
-            this.Controls.Add(this.countTextField);
+            this.Controls.Add(this.countOfGroupsTextField);
             this.Controls.Add(this.countLabel);
             this.Controls.Add(this.automaticButton);
             this.Controls.Add(this.manualButton);
@@ -147,8 +180,10 @@ namespace ExpertEvaluationIS
         private MaterialSkin.Controls.MaterialFlatButton manualButton;
         private MaterialSkin.Controls.MaterialRaisedButton automaticButton;
         private MaterialSkin.Controls.MaterialLabel countLabel;
-        private MaterialSkin.Controls.MaterialSingleLineTextField countTextField;
+        private MaterialSkin.Controls.MaterialSingleLineTextField countOfGroupsTextField;
         private MaterialSkin.Controls.MaterialRaisedButton nextButton;
         private MaterialSkin.Controls.MaterialFlatButton goBackButton;
+        private MaterialSkin.Controls.MaterialSingleLineTextField countTextField;
+        private MaterialSkin.Controls.MaterialLabel ccountLabel;
     }
 }

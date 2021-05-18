@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ExpertEvaluationIS
 {
-    public class G
+    public class G 
     {
         public int Count { get; set; }                  //count of Criterion
         public int QCount { get; set; }                 //count of Questions, by default = 4
@@ -13,6 +13,7 @@ namespace ExpertEvaluationIS
         public G() { }
 
         public G(int Count, int QCount) { this.Count = Count; this.QCount = QCount; }
+        public G(int Count, int QCount, List<Gi> GiCollection) { this.Count = Count; this.QCount = QCount; this.GiCollection = GiCollection; }
 
     }
  
