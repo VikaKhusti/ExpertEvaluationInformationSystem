@@ -14,13 +14,14 @@ namespace ExpertEvaluationIS
     public partial class SetUp : MaterialForm
     {
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
-        public static Groups groups = new Groups(Start_Page.CountOfGroups);
+        public static Groups groups = new Groups(Start_Page.CountOfGroups); //holds all information from input 
         public static G gMain = new G(Start_Page.Count, 4);
 
         List<Qij> qiCollecton = new List<Qij>();
         List<Gi> giCollection = new List<Gi>();
         List<Qij> questionCollection = new List<Qij>();
         List<Answers> answersCollection = new List<Answers>();
+        List<G> groupsCollection = new List<G>();
 
         int GCount = 1;
         int QCount = 1;
@@ -101,22 +102,18 @@ namespace ExpertEvaluationIS
         {
             string GiName = nameTextField.Text;
             giCollection.Add(new Gi(GiName, GCount, questions));
-            List<G> groupsCollection = new List<G>();
             if (giCollection.Count >= gMain.Count)
             {
-                //var tempCollection = new List<Gi>(giCollection);
-                //gMain.GiCollection = giCollection;
                 groupsCollection.Add(new G(gMain.Count, 4, new List<Gi>(giCollection)));
                 if(groupsCollection.Count >= Start_Page.CountOfGroups)
                 {
                     groups.GCollection = groupsCollection;
+                    // INPUT COMLITED HERE
+
+                    Pool poolDialog = new Pool();
+                    poolDialog.ShowDialog();
                 }
-                giCollection.Clear();
-                //groups.GCollection.Add(gMain);
-                //gMain.GiCollection.Clear();
-                //Pool poolDialog = new Pool();
-                //poolDialog.ShowDialog();
-                // INPUT COMLITED HERE
+                giCollection.Clear();                
             }
             questionCollection.Clear();
             QCount = 1;

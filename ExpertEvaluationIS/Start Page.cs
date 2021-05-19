@@ -55,7 +55,7 @@ namespace ExpertEvaluationIS
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            try
+            //try
             {
                 CountOfGroups = Convert.ToInt32(countOfGroupsTextField.Text);
                 Count = Convert.ToInt32(countTextField.Text);
@@ -64,7 +64,7 @@ namespace ExpertEvaluationIS
                 SetUp setUp = new SetUp();
                 setUp.ShowDialog();
             }
-            catch
+            /*catch
             {
                 MessageBox.Show(
                     "Не вірно внесені дані",
@@ -72,7 +72,7 @@ namespace ExpertEvaluationIS
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                     );
-            }
+            }*/
         }
 
         private void manualButton_Click(object sender, EventArgs e)

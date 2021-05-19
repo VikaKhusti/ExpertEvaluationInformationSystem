@@ -12,9 +12,15 @@ namespace ExpertEvaluationIS
     public partial class Pool : MaterialForm
     {
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
-        G gmain;
-        int GCount = 1;
-        int QCount = 1;
+        static Groups data = SetUp.groups;
+        static int GCount = data.Count;
+        static int KCount = data.GCollection[0].Count;
+        static int QCount = data.GCollection[0].QCount;
+
+        int groupNum = 1;
+        int criteriaNum = 1;
+        int questionNum = 1;
+
         public Pool()
         {
             InitializeComponent();
@@ -29,36 +35,47 @@ namespace ExpertEvaluationIS
                 MaterialSkin.Accent.Pink700,
                 MaterialSkin.TextShade.WHITE
                 );
-
+            initializeFields(1, 1, 1);
             //gmain = SetUp.gMain;
-            InitializeFields();
-        }
-
-        private void InitializeFields()
-        {
-            foreach (var item in gmain.GiCollection)
-            {
-                if(item.Number == GCount)
-                {
-                    foreach (var q in item.QijCollection)
-                    {
-                        questionLabel.Text = q.Name;
-                        if(q.Number == QCount)
-                        {
-                            foreach (var a in q.ansCollection)
-                            {
-                                quest1RadioButton.Name = a.Answer;
-                            }
-                        }
-
-                    }
-                }
-            }
             
         }
-        private void nextRaisedButton_Click(object sender, EventArgs e)
-        {
 
+        private void initializeFields(int groupNum, int criteriaNum, int questionNum)
+        {
+            criterionLabel.Text = data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].GName;
+            questionLabel.Text = data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum-1].Name;
+            quest1RadioButton.Text = data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[0].Answer;
+            quest2RadioButton.Text = data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[1].Answer;
+            quest3RadioButton.Text = data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[2].Answer;
+            quest4RadioButton.Text = data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[3].Answer;
+        }
+
+        
+        private void nextRaisedButton_Click(object sender, EventArgs e)
+        {            
+            data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[0].isSelected = quest1RadioButton.Checked;
+            data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[1].isSelected = quest2RadioButton.Checked;
+            data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[2].isSelected = quest3RadioButton.Checked;
+            data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[3].isSelected = quest4RadioButton.Checked;
+
+            
+            if(questionNum >= QCount)
+            {
+                questionNum = 0;
+                
+                if(criteriaNum >= KCount)
+                {
+                    criteriaNum = 0;                    
+                    if(groupNum >= GCount)
+                    {
+                        //finish
+                    }
+                    groupNum++;
+                }
+                criteriaNum++;
+            }
+            questionNum++;
+            initializeFields(groupNum, criteriaNum, questionNum);
         }
     }
 }
