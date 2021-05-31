@@ -36,6 +36,9 @@ namespace ExpertEvaluationIS
             this.quest4RadioButton = new MaterialSkin.Controls.MaterialRadioButton();
             this.nextRaisedButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.criterionLabel = new System.Windows.Forms.Label();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialSingleLineTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.next2Button = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
             // questionLabel
@@ -133,17 +136,61 @@ namespace ExpertEvaluationIS
             // 
             this.criterionLabel.AutoSize = true;
             this.criterionLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.criterionLabel.Location = new System.Drawing.Point(359, 89);
+            this.criterionLabel.Location = new System.Drawing.Point(12, 88);
             this.criterionLabel.Name = "criterionLabel";
             this.criterionLabel.Size = new System.Drawing.Size(86, 37);
             this.criterionLabel.TabIndex = 6;
             this.criterionLabel.Text = "label1";
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(46, 149);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(108, 19);
+            this.materialLabel1.TabIndex = 7;
+            this.materialLabel1.Text = "materialLabel1";
+            // 
+            // materialSingleLineTextField
+            // 
+            this.materialSingleLineTextField.Depth = 0;
+            this.materialSingleLineTextField.Hint = "";
+            this.materialSingleLineTextField.Location = new System.Drawing.Point(46, 199);
+            this.materialSingleLineTextField.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField.Name = "materialSingleLineTextField";
+            this.materialSingleLineTextField.PasswordChar = '\0';
+            this.materialSingleLineTextField.SelectedText = "";
+            this.materialSingleLineTextField.SelectionLength = 0;
+            this.materialSingleLineTextField.SelectionStart = 0;
+            this.materialSingleLineTextField.Size = new System.Drawing.Size(75, 23);
+            this.materialSingleLineTextField.TabIndex = 8;
+            this.materialSingleLineTextField.UseSystemPasswordChar = false;
+            // 
+            // next2Button
+            // 
+            this.next2Button.Depth = 0;
+            this.next2Button.Location = new System.Drawing.Point(42, 240);
+            this.next2Button.MouseState = MaterialSkin.MouseState.HOVER;
+            this.next2Button.Name = "next2Button";
+            this.next2Button.Primary = true;
+            this.next2Button.Size = new System.Drawing.Size(163, 38);
+            this.next2Button.TabIndex = 9;
+            this.next2Button.Text = "Далі";
+            this.next2Button.UseVisualStyleBackColor = true;
+            this.next2Button.Click += new System.EventHandler(this.next2Button_Click);
             // 
             // Pool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 514);
+            this.Controls.Add(this.next2Button);
+            this.Controls.Add(this.materialSingleLineTextField);
+            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.criterionLabel);
             this.Controls.Add(this.nextRaisedButton);
             this.Controls.Add(this.quest4RadioButton);
@@ -167,5 +214,8 @@ namespace ExpertEvaluationIS
         private MaterialSkin.Controls.MaterialRadioButton quest4RadioButton;
         private MaterialSkin.Controls.MaterialRaisedButton nextRaisedButton;
         private System.Windows.Forms.Label criterionLabel;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField;
+        private MaterialSkin.Controls.MaterialRaisedButton next2Button;
     }
 }

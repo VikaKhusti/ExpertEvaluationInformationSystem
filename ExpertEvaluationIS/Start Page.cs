@@ -63,8 +63,7 @@ namespace ExpertEvaluationIS
                 //inputform.ShowDialog();
                 SetUp setUp = new SetUp();
                 setUp.ShowDialog();
-            }
-            /*catch
+            } /*catch
             {
                 MessageBox.Show(
                     "Не вірно внесені дані",

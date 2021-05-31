@@ -35,6 +35,7 @@ namespace ExpertEvaluationIS
                 MaterialSkin.Accent.Pink700,
                 MaterialSkin.TextShade.WHITE
                 );
+            Step2(false);
             initializeFields(1, 1, 1);
             //gmain = SetUp.gMain;
             
@@ -52,11 +53,18 @@ namespace ExpertEvaluationIS
 
         
         private void nextRaisedButton_Click(object sender, EventArgs e)
-        {            
-            data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[0].isSelected = quest1RadioButton.Checked;
-            data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[1].isSelected = quest2RadioButton.Checked;
-            data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[2].isSelected = quest3RadioButton.Checked;
-            data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[3].isSelected = quest4RadioButton.Checked;
+        {
+            bool callTask2 = false;
+            try
+            {
+                data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[0].isSelected = quest1RadioButton.Checked;
+                data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[1].isSelected = quest2RadioButton.Checked;
+                data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[2].isSelected = quest3RadioButton.Checked;
+                data.GCollection[groupNum - 1].GiCollection[criteriaNum - 1].QijCollection[questionNum - 1].ansCollection[3].isSelected = quest4RadioButton.Checked;
+            } catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
 
             
             if(questionNum >= QCount)
@@ -69,13 +77,70 @@ namespace ExpertEvaluationIS
                     if(groupNum >= GCount)
                     {
                         //finish
+                        Step2(true);
+                        callTask2 = true;
+                        //criterionLabel.Text = data.GCollection[G].GiCollection[K].GName;
                     }
                     groupNum++;
                 }
                 criteriaNum++;
             }
             questionNum++;
-            initializeFields(groupNum, criteriaNum, questionNum);
+
+            if (!callTask2) initializeFields(groupNum, criteriaNum, questionNum);            
+        }
+
+        private void Step2(bool ready)
+        {
+            criterionLabel.Text = "Задайте бажані значення щодо описаних критеріїв";
+            materialLabel1.Visible = ready;
+            materialSingleLineTextField.Visible = ready;
+            next2Button.Visible = ready;
+
+            questionLabel.Visible = !ready;
+            quest1RadioButton.Visible = !ready;
+            quest2RadioButton.Visible = !ready;
+            quest3RadioButton.Visible = !ready;
+            quest4RadioButton.Visible = !ready;
+            nextRaisedButton.Visible = !ready;
+            task2(0, 0);
+        }
+        private int task2(int g, int k)
+        {
+            int value = -1;
+            try
+            {
+                materialLabel1.Text = data.GCollection[g].GiCollection[k].GName;
+                if(k > 0)
+                {
+                    value = Convert.ToInt32(materialSingleLineTextField.Text);
+                }
+
+             } catch(Exception ex)
+             {
+                MessageBox.Show(
+                "Не вірно внесені дані",
+                "Помилка",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error
+                );                       
+            }
+            return value;
+        }
+
+        int G = 0, K = 0;
+        private void next2Button_Click(object sender, EventArgs e)
+        {
+            if (G < GCount)
+            {
+                if (K < KCount)
+                {
+                    data.GCollection[G].GiCollection[K].DesirableRating = task2(G, K);
+                    K++;
+                }
+                else { G++; K = 0; }
+            }
+            
         }
     }
 }

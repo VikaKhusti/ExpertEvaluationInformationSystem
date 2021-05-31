@@ -173,6 +173,6 @@ namespace ExpertEvaluationIS
         private void setDummyDataLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             setDummyData(ref click);
-        }
+        }       
     }
 }
